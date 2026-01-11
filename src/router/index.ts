@@ -1,8 +1,9 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../pages/Home.vue'
-import About from '../pages/About.vue'
-import Services from '../pages/Services.vue'
-import Contact from '../pages/Contact.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import Home from '../pages/Home.vue';
+import About from '../pages/About.vue';
+import Services from '../pages/Services.vue';
+import Contact from '../pages/Contact.vue';
+import NotFound from '../pages/NotFound.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,28 +11,29 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
     },
     {
       path: '/about',
       name: 'about',
-      component: About
+      component: About,
     },
     {
       path: '/services',
       name: 'services',
-      component: Services
+      component: Services,
     },
     {
       path: '/contact',
       name: 'contact',
-      component: Contact
+      component: Contact,
     },
     {
       path: '/:pathMatch(.*)*',
-      redirect: '/'
-    }
-  ]
-})
+      name: 'not-found',
+      component: NotFound,
+    },
+  ],
+});
 
-export default router
+export default router;
