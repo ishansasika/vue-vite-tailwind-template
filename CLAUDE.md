@@ -168,3 +168,25 @@ const increment = () => count.value++
 - Use `useRouter()` to programmatically navigate
 - Use `<RouterLink>` component for navigation links
 - Use `<RouterView>` for rendering matched routes
+
+## Git Conventions
+
+### Commit Format
+```
+feat: Add <description>
+fix: Fix <description>
+docs: Update <description>
+```
+
+- Use lowercase after the prefix
+- Keep messages concise and descriptive
+
+### Branch Naming
+```
+release/v{version}-{short-description}
+```
+Example: `release/v4.1.0-neon-status-particle`
+
+### Important Rules
+- **Never add `Co-Authored-By: Claude` lines** to any commit messages or PR descriptions
+- **Never include AI attribution** in commits, PRs, or any git history
